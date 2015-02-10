@@ -26,7 +26,7 @@ Bundle 'gmarik/vundle'
 " 如使用自己的git库的插件，像下面这样做
 "Bundle 'git://git.wincent.com/command-t.git'
 " git repos on your local machine (ie. when working on your own plugin)
-Bundle 'file:///Users/gmarik/path/to/plugin'
+"Bundle 'file:///Users/gmarik/path/to/plugin'
 
 Bundle 'tomasr/molokai'
 Bundle 'altercation/vim-colors-solarized'
