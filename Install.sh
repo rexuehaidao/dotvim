@@ -1,10 +1,24 @@
 #!/bin/sh
 
-echo git clone https://github.com/rexuehaidao/dotvim.git ~/dotvim
-git clone https://github.com/rexuehaidao/dotvim.git ~/dotvim
+if [ -e ~/dotvim ] 
+then
+    echo git pull dotvim
+    cd ~/dotvim
+    git pull
+else
+    echo git clone https://github.com/rexuehaidao/dotvim.git ~/dotvim
+    git clone https://github.com/rexuehaidao/dotvim.git ~/dotvim
+fi
 
-echo git clone https://github.com/gmarik/vundle.git ~/dotvim/bundle/vundle
-git clone https://github.com/gmarik/vundle.git ~/dotvim/bundle/vundle
+if [ -e ~/dotvim/bundle/vundle ] 
+then
+    echo git pull vundle 
+    cd ~/dotvim/bundle/vundle
+    git pull
+else
+    echo git clone https://github.com/gmarik/vundle.git ~/dotvim/bundle/vundle
+    git clone https://github.com/gmarik/vundle.git ~/dotvim/bundle/vundle
+fi
 
 if [ ! -e ~/.vim_bak ]
 then
