@@ -120,8 +120,6 @@ set ffs=unix,dos,mac
 " 定义快捷键
 let mapleader=";"
 
-:nmap lb 0
-:nmap le $
 :nmap <Leader>p "+p
 :vnoremap <Leader>y "+y
 :nmap <S-CR> o<Esc>
