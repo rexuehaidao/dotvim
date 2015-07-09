@@ -118,7 +118,7 @@ language messages zh_CN.utf-8
 set ffs=unix,dos,mac
 
 " 定义快捷键
-let mapleader=";"
+let mapleader=" "
 
 :nmap <Leader>p "+p
 :vnoremap <Leader>y "+y
@@ -127,4 +127,8 @@ let mapleader=";"
 :nmap <Leader>w :w<CR>
 :nmap <Leader>x :wq<CR>
 ":nmap <Leader>Q :q!<CR>
+if has('mac')
+    vmap <C-c> y:call system("pbcopy", getreg("\""))<CR>
+    nmap <C-v> :call setreg("\"",system("pbpaste"))<CR>p
+endif
 
